@@ -18,7 +18,7 @@ public class FollowPlayer : MonoBehaviour {
   
   void FixedUpdate () {
   
-    Vector3.targetPos = player.position;
+    Vector3 targetPos = player.position;
     
     targetPos.z = player.position.z;
     
