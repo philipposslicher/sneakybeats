@@ -26,7 +26,7 @@ public class MusicBounce : MonoBehaviour
         volumeScale = a / 16;
 
         Vector2 volumeVector = new Vector2(volumeScale + 0.5f, volumeScale + 0.5f);
-        rt.localScale = Vector2.Lerp(rt.localScale, volumeVector, 0.05f);
+        rt.localScale = Vector2.Lerp(rt.localScale, volumeVector, 0.03f);
     }
 
 }
