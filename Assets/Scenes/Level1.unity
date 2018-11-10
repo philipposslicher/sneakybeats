@@ -308,7 +308,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
   m_Mass: 1
-  m_LinearDrag: 5
+  m_LinearDrag: 8
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -379,7 +379,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 0}
+  m_BackGroundColor: {r: 0.5040626, g: 0.764151, b: 0.34963512, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -550,7 +550,7 @@ MonoBehaviour:
   stopDistance: 5
   seekDistance: 10
   startWaitTime: 1
-  speed: 5
+  speed: 10
   moveSpot: {fileID: 567747808}
   minX: 0
   minY: 5
@@ -568,7 +568,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
   m_Mass: 1
-  m_LinearDrag: 34.17
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}

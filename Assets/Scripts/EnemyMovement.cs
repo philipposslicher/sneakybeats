@@ -37,7 +37,7 @@ public class EnemyMovement : MonoBehaviour
         }
         else
         {
-            Patrol();
+            // Patrol();
         }
     }
 
