@@ -16,8 +16,10 @@ public class EnemyMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Transform player;
     private Vector3 heading;
-    private bool stopCondition;
+    private bool stopCondition1;
+    private bool stopCondition2;
     private float waitTime;
+    private bool isAlreadyMopping;
 
     void Start()
     {
@@ -30,10 +32,24 @@ public class EnemyMovement : MonoBehaviour
     private void Update()
     {
         heading = (player.position - transform.position);
-        stopCondition = heading.sqrMagnitude > stopDistance * stopDistance && heading.sqrMagnitude < seekDistance * seekDistance;
-        if (stopCondition)
+        stopCondition1 = heading.sqrMagnitude > stopDistance * stopDistance;
+        stopCondition2 = heading.sqrMagnitude < seekDistance * seekDistance;
+        if (stopCondition2)
         {
-            rb.AddForce(heading * speed * Time.deltaTime, ForceMode2D.Force);
+            if (stopCondition1)
+            {
+                isAlreadyMopping = false;
+                rb.AddForce(heading * speed * Time.deltaTime, ForceMode2D.Force);
+            }
+            else
+            {
+                if (!isAlreadyMopping)
+                {
+                    Debug.Log("Mopping...");
+                    isAlreadyMopping = true;
+                }
+                
+            }
         }
         else
         {
